@@ -1,0 +1,12 @@
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\bin\Debug\net6.0\DogLibrary.deps.json
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\bin\Debug\net6.0\DogLibrary.dll
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\bin\Debug\net6.0\DogLibrary.pdb
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.csproj.AssemblyReference.cache
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.AssemblyInfoInputs.cache
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.AssemblyInfo.cs
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.csproj.CoreCompileInputs.cache
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.dll
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\refint\DogLibrary.dll
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\DogLibrary.pdb
+C:\Workspace\src\Jeff\ConsoleAppP3InClass2\DogLibrary\obj\Debug\net6.0\ref\DogLibrary.dll

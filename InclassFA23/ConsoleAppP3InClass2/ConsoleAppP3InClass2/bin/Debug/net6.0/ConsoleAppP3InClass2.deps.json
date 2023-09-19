@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "ConsoleAppP3InClass2/1.0.0": {
+        "dependencies": {
+          "DogLibrary": "1.0.0"
+        },
+        "runtime": {
+          "ConsoleAppP3InClass2.dll": {}
+        }
+      },
+      "DogLibrary/1.0.0": {
+        "runtime": {
+          "DogLibrary.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "ConsoleAppP3InClass2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DogLibrary/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
