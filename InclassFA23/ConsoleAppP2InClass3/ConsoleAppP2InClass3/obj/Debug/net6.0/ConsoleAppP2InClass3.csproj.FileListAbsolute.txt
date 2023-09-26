@@ -1,0 +1,15 @@
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\bin\Debug\net6.0\ConsoleAppP2InClass3.exe
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\bin\Debug\net6.0\ConsoleAppP2InClass3.deps.json
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\bin\Debug\net6.0\ConsoleAppP2InClass3.runtimeconfig.json
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\bin\Debug\net6.0\ConsoleAppP2InClass3.dll
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\bin\Debug\net6.0\ConsoleAppP2InClass3.pdb
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.csproj.AssemblyReference.cache
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.AssemblyInfoInputs.cache
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.AssemblyInfo.cs
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.csproj.CoreCompileInputs.cache
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.dll
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\refint\ConsoleAppP2InClass3.dll
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.pdb
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ConsoleAppP2InClass3.genruntimeconfig.cache
+C:\Workspace\src\test\Programming2\InclassFA23\ConsoleAppP2InClass3\ConsoleAppP2InClass3\obj\Debug\net6.0\ref\ConsoleAppP2InClass3.dll

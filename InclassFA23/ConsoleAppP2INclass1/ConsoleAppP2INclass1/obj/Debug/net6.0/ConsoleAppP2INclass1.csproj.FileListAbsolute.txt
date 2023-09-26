@@ -1,0 +1,15 @@
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\bin\Debug\net6.0\ConsoleAppP2INclass1.exe
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\bin\Debug\net6.0\ConsoleAppP2INclass1.deps.json
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\bin\Debug\net6.0\ConsoleAppP2INclass1.runtimeconfig.json
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\bin\Debug\net6.0\ConsoleAppP2INclass1.dll
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\bin\Debug\net6.0\ConsoleAppP2INclass1.pdb
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.csproj.AssemblyReference.cache
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.AssemblyInfoInputs.cache
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.AssemblyInfo.cs
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.csproj.CoreCompileInputs.cache
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.dll
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\refint\ConsoleAppP2INclass1.dll
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.pdb
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ConsoleAppP2INclass1.genruntimeconfig.cache
+C:\Workspace\src\Jeff\ConsoleAppP2INclass1\ConsoleAppP2INclass1\obj\Debug\net6.0\ref\ConsoleAppP2INclass1.dll
