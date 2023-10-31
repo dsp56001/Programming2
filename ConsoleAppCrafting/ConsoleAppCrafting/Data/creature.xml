@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<creatures>
+	<creature Type="Skeleton" Description="Scary Seleton">
+		<Name>Jack</Name>
+		<Age>2</Age>
+	</creature>
+	<creature Type="Ghost" Description="Scary Ghost">
+		<Name>Casper</Name>
+		<Age>2</Age>
+	</creature>
+</creatures>

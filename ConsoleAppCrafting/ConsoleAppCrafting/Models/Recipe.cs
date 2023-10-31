@@ -11,10 +11,8 @@ namespace ConsoleAppCrafting.Models
     public class Recipe : IRecipe
     {
         public List<IItem> Ingredients { get; set; }
-
         public float YieldAmount { get; set; }
-        
-        public string YieldName { get; }
+        public string YieldName { get; } //ignore
         public IItem YieldItem { get; set; }    
         public string Name { get; set; }
         public string Description { get; set; }
@@ -37,8 +35,9 @@ namespace ConsoleAppCrafting.Models
             AboutString += $"Name:\t\t{this.Name}\n";
             AboutString += $"Desciption:\t\t{this.Description}\n";
             AboutString += $"YieldAmount:\t\t{this.YieldAmount:G}\n";
-            AboutString += $"Yield Item:\t\t{this.YieldItem.Name}\n";
-            AboutString += $"Yield Item Description:\t\t{this.YieldItem.Description}\n";
+            AboutString += $"Yield Item------------\n";
+
+            AboutString += $"{this.YieldItem.About()}\n";
             AboutString += $"Ingredients ----------------------------\n";
             foreach ( var ingredient in Ingredients )
             {

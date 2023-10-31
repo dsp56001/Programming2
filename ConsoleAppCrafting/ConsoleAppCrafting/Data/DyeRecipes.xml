@@ -44,4 +44,15 @@
 			<IItem Name="Yellow Coloring" Description="Yellow stuff"></IItem>
 		</Ingredients>
 	</Recipe>
+
+	<Recipe Name="Purple Dye Recipe" Descitption="Purple Dye is make from Red and Blue coloring" YieldAmount="2" >
+		<YieldItem>
+			<IItem Name ="Purple Dye" Description="Turns things Purple">
+			</IItem>
+		</YieldItem>
+		<Ingredients>
+			<IItem Name="Blue Coloring" Desctription="Blue stuff"></IItem>
+			<IItem Name="Red Coloring" Desctription="Red stuff"></IItem>
+		</Ingredients>
+	</Recipe>   
 </Recipes>
