@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Recipes>
+	
+	<Recipe Name="Yellow Dye Recipe" Description="Yellow Dye is made from Yellow coloring" YieldAmount="1" >
+		<YieldItem>
+			<IItem Name="Yellow Dye" Description="Turns things Yellow">
+			</IItem>
+		</YieldItem>
+		<Ingredients>
+			<IItem Name="Yellow Coloring" Description="Yellow stuff">
+			</IItem>
+		</Ingredients>
+	</Recipe>
+
+	<Recipe Name="Red Dye Recipe" Description="Red Dye is made from Red coloring" YieldAmount="1" >
+		<YieldItem>
+			<IItem Name="Red Dye" Description="Turns things Red">
+			</IItem>
+		</YieldItem>
+		<Ingredients>
+			<IItem Name="Red Coloring" Description="Red stuff">
+			</IItem>
+		</Ingredients>
+	</Recipe>
+
+	<Recipe Name="Blue Dye Recipe" Description="Blue Dye is made from Blue coloring" YieldAmount="1" >
+		<YieldItem>
+			<IItem Name="Blue Dye" Description="Turns things Blue">
+			</IItem>
+		</YieldItem>
+		<Ingredients>
+			<IItem Name="Blue Coloring" Description="Blue stuff">
+			</IItem>
+		</Ingredients>
+	</Recipe>
+
+	<Recipe Name="Green Dye Recipe" Description="Green Dye is made from Blue and Yellow coloring" YieldAmount="2" >
+		<YieldItem>
+			<IItem Name="Green Dye" Description="Turns things Green">
+			</IItem>
+		</YieldItem>
+		<Ingredients>
+			<IItem Name="Blue Coloring" Description="Blue stuff"></IItem>
+			<IItem Name="Yellow Coloring" Description="Yellow stuff"></IItem>
+		</Ingredients>
+	</Recipe>
+</Recipes>

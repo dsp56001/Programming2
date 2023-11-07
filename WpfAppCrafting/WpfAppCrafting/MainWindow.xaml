@@ -1,0 +1,35 @@
+﻿<Window x:Class="WpfAppCrafting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCrafting"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <Label FontWeight="Bold">Customer</Label>
+            <StackPanel >
+                <Label FontWeight="Bold">Inventory</Label>
+                <ListBox  x:Name="cInventory">
+                    
+                </ListBox>
+                <Button x:Name="btnAddToCraftingInventory" Click="btnAddToCraftingInventory_Click">
+                    Add to Crafting
+                </Button>
+            </StackPanel>
+            <StackPanel >
+                <Label FontWeight="Bold">Crafting Inventory</Label>
+                <ListBox  x:Name="cCraftingInventory">
+
+                </ListBox>
+                <Button x:Name="btnRemoveFromCraftingInventory" Click="btnRemoveFromCraftingInventory_Click">
+                    Remove from Crafting
+                </Button>
+            </StackPanel>
+            <ComboBox x:Name="cRecipe"></ComboBox>
+            <Button x:Name="btnCraft" Click="btnCraft_Click">Craft</Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
