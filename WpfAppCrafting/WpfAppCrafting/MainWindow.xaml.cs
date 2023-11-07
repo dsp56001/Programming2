@@ -44,17 +44,7 @@ namespace WpfAppCrafting
             //Add items to invetory items
             foreach(var item in app.Customer.InventoryItems)
             {
-                ListBoxItem listBoxItem = new ListBoxItem() { Content= item.Name };
-                
-                //Fancy colors
-                if (item is Dye)
-                {
-                    listBoxItem.Background = new SolidColorBrush() { Color = System.Windows.Media.Color.FromRgb(((Dye)item).Color.R, ((Dye)item).Color.G, ((Dye)item).Color.B )};
-                }
-                cInventory.Items.Add(listBoxItem);
-                //cInventory.Items.Add(item.Name);
-
-                
+                cInventory.Items.Add(item.Name);
             }
             //Add items to craft items
             foreach (var item in app.Customer.CraftItems)
