@@ -11,8 +11,10 @@ namespace ConsoleAppCrafting.Models
 {
     internal class FoodColoringRecipes
     {
+        //Private Instance Data Member
         List<Recipe> recipes;
 
+        //Accessor
         public List<Recipe> Recipes
         {
             get { return recipes; }
@@ -38,7 +40,6 @@ namespace ConsoleAppCrafting.Models
             IItem purpleDye = new Dye() { Name = "Purple Dye", Description = "Turns things purple" };
 
             //Recipes
-
             Recipe yellowDyeRecipe = new Recipe()
             {
                 Description = "Yellow Dye is made from Yellow coloring",
@@ -92,7 +93,7 @@ namespace ConsoleAppCrafting.Models
                     redColoring, blueColoring
                  },
                 YieldAmount = 2,
-                YieldItem = greenDye
+                YieldItem = purpleDye
             };
 
             List<Recipe> recipes = new List<Recipe>()
