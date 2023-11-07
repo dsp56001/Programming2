@@ -30,14 +30,14 @@ namespace WpfAppCrafting.Models.UI
 
             string craftingMessage = string.Empty;
 
-            Customer.AddToCraftingItem("Yellow Coloring");
+            Customer.MoveItemToCraftingItemsFromInveroty("Yellow Coloring");
             craftingMessage = Customer.Craft(Supplier.GetRecipe("Yellow Dye Recipe"));
             Console.WriteLine(craftingMessage);
 
             Console.WriteLine(Customer.About());
 
-            Customer.AddToCraftingItem("Yellow Coloring");
-            Customer.AddToCraftingItem("Blue Coloring");
+            Customer.MoveItemToCraftingItemsFromInveroty("Yellow Coloring");
+            Customer.MoveItemToCraftingItemsFromInveroty("Blue Coloring");
             craftingMessage = Customer.Craft(Supplier.GetRecipe("Green Dye Recipe"));
             Console.WriteLine(craftingMessage);
 
@@ -46,9 +46,9 @@ namespace WpfAppCrafting.Models.UI
 
         public void GiveThreeItems()
         {
-            Customer.GiveItem(Supplier.GetIngredient("Yellow Coloring"));
-            Customer.GiveItem(Supplier.GetIngredient("Yellow Coloring"));
-            Customer.GiveItem(Supplier.GetIngredient("Blue Coloring"));
+            Customer.AddItemToInventory(Supplier.GetItem("Yellow Coloring"));
+            Customer.AddItemToInventory(Supplier.GetItem("Yellow Coloring"));
+            Customer.AddItemToInventory(Supplier.GetItem("Blue Coloring"));
         }
     }
 }

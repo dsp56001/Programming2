@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO.Enumeration;
 using System.Linq;
 using System.Text;
@@ -31,11 +32,11 @@ namespace ConsoleAppCrafting.Models
             IItem redColoring = new Item() { Name = "Red Coloring", Description = "Red stuff" };
             IItem blueColoring = new Item() { Name = "Blue Coloring", Description = "Blue stuff" };
 
-            IItem yellowDye = new Dye() { Name = "Yellow Dye", Description = "Turns things Yellow", Price=1 };
-            IItem redDye = new Dye() { Name = "Red Dye", Description = "Turns things Red", Price = 1 };
-            IItem blueDye = new Dye() { Name = "Blue Dye", Description = "Turns things Blue", Price = 1 };
-            IItem greenDye = new Dye() { Name = "Green Dye", Description = "Turns things Green" , Price = 2.5m };
-            IItem purpleDye = new Dye() { Name = "Purple Dye", Description = "Turns things purple" , Price = 2.5m };
+            IItem yellowDye = new Dye() { Name = "Yellow Dye", Description = "Turns things Yellow", Price=1, Color=Color.Yellow, ColorName ="Yellow"};
+            IItem redDye = new Dye() { Name = "Red Dye", Description = "Turns things Red", Price = 1, Color = Color.Red, ColorName = "Red" };
+            IItem blueDye = new Dye() { Name = "Blue Dye", Description = "Turns things Blue", Price = 1, Color = Color.Blue, ColorName = "Blue" };
+            IItem greenDye = new Dye() { Name = "Green Dye", Description = "Turns things Green" , Price = 2.5m, Color = Color.Green, ColorName = "Green" };
+            IItem purpleDye = new Dye() { Name = "Purple Dye", Description = "Turns things purple" , Price = 2.5m, Color = Color.Purple, ColorName = "Purple" };
 
             //Recipes
             Recipe yellowDyeRecipe = new Recipe()

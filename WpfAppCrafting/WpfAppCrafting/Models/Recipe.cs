@@ -11,7 +11,6 @@ namespace ConsoleAppCrafting.Models
     public class Recipe : IRecipe
     {
         public List<IItem> Ingredients { get; set; }
-
         public float YieldAmount { get; set; }
         
         public IItem YieldItem { get; set; }    
@@ -24,10 +23,8 @@ namespace ConsoleAppCrafting.Models
             this.YieldItem = new Item();
             this.YieldAmount = 1f;
             this.Name = "Item Name";
-            
-            this.Description = "Item Description";
 
-            
+            this.Description = "Item Description";
         }
 
         public string About()
@@ -46,6 +43,12 @@ namespace ConsoleAppCrafting.Models
             return AboutString;
         }
 
+        /// <summary>
+        /// Make Recipe returns the Yeild Item id all of the souce items requiremnts of the Ingredients are met
+        /// </summary>
+        /// <param name="sourceItems">List of source items</param>
+        /// <returns>a new Item of type YeildItem</returns>
+        /// <exception cref="Exception">Throws and excpetion if the ingredients aren't met</exception>
         public IItem MakeRecipe(List<IItem> sourceItems)
         {
             List<IItem> requiredItems = this.Ingredients.ToList();

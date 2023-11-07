@@ -10,11 +10,10 @@ namespace ConsoleAppCrafting.Models
     public class Dye : Item
     {
         public string ColorName { get; set; }
-        public KnownColor Color { get; set; }
-
+        public Color Color { get; set; }
         public Dye() {
             this.ColorName = "Yellow";
-            this.Color = KnownColor.Yellow;
+            this.Color = Color.Yellow;
         }
 
     }

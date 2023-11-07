@@ -24,22 +24,22 @@ namespace ConsoleAppCrafting.UI
 
         internal void Test()
         {
-            this.Customer.GiveItem(this.Supplier.GetIngredient("Yellow Coloring"));
-            this.Customer.GiveItem(this.Supplier.GetIngredient("Yellow Coloring"));
-            this.Customer.GiveItem(this.Supplier.GetIngredient("Blue Coloring"));
+            this.Customer.AddItemToInventory(this.Supplier.GetItem("Yellow Coloring"));
+            this.Customer.AddItemToInventory(this.Supplier.GetItem("Yellow Coloring"));
+            this.Customer.AddItemToInventory(this.Supplier.GetItem("Blue Coloring"));
 
             Console.WriteLine(this.Customer.About());
 
             string craftingMessage = string.Empty;
 
-            this.Customer.AddToCraftingItem("Yellow Coloring");
+            this.Customer.MoveItemToCraftingItemsFromInveroty("Yellow Coloring");
             craftingMessage = this.Customer.Craft(this.Supplier.GetRecipe("Yellow Dye Recipe"));
             Console.WriteLine(craftingMessage);
 
             Console.WriteLine(this.Customer.About());
 
-            this.Customer.AddToCraftingItem("Yellow Coloring");
-            this.Customer.AddToCraftingItem("Blue Coloring");
+            this.Customer.MoveItemToCraftingItemsFromInveroty("Yellow Coloring");
+            this.Customer.MoveItemToCraftingItemsFromInveroty("Blue Coloring");
             craftingMessage = this.Customer.Craft(this.Supplier.GetRecipe("Green Dye Recipe"));
             Console.WriteLine(craftingMessage);
 

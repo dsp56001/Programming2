@@ -64,12 +64,12 @@ namespace ConsoleAppCrafting.Models
             throw new Exception($"Recipe {RecipeName} not found");
         }
 
-        public List<IItem> GetIngredientList()
+        public List<IItem> GetItemList()
         {
             return this.ingredients.ToList<IItem>();
         }
 
-        public IItem GetIngredient(string ItemName)
+        public IItem GetItem(string ItemName)
         {
             var item = this.ingredients.Where(i => i.Name == ItemName).FirstOrDefault<IItem>();
             if (item != null)

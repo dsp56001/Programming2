@@ -1,5 +1,6 @@
 ﻿
 using ConsoleAppCrafting.Models;
+using ConsoleAppCrafting;
 using ConsoleAppCrafting.UI;
 using System.Runtime.InteropServices;
 

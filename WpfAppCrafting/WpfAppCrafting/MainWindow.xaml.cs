@@ -1,6 +1,7 @@
 ﻿using ConsoleAppCrafting.Models;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,16 +23,18 @@ namespace WpfAppCrafting
     /// </summary>
     public partial class MainWindow : Window
     {
-
         UIApplication app;
         public MainWindow()
         {
             InitializeComponent();
             app = new UIApplication();
-            app.GiveThreeItems();
+            app.GiveThreeItems(); //don't start with empty inventory should give something to start with
             UpdateUI();
         }
 
+        /// <summary>
+        /// Updates the UI from the app class
+        /// </summary>
         private void UpdateUI()
         {
             //Clear UIItems
@@ -41,8 +44,17 @@ namespace WpfAppCrafting
             //Add items to invetory items
             foreach(var item in app.Customer.InventoryItems)
             {
+                ListBoxItem listBoxItem = new ListBoxItem() { Content= item.Name };
                 
-                cInventory.Items.Add(item.Name);
+                //Fancy colors
+                if (item is Dye)
+                {
+                    listBoxItem.Background = new SolidColorBrush() { Color = System.Windows.Media.Color.FromRgb(((Dye)item).Color.R, ((Dye)item).Color.G, ((Dye)item).Color.B )};
+                }
+                cInventory.Items.Add(listBoxItem);
+                //cInventory.Items.Add(item.Name);
+
+                
             }
             //Add items to craft items
             foreach (var item in app.Customer.CraftItems)
@@ -50,10 +62,10 @@ namespace WpfAppCrafting
                 cCraftingInventory.Items.Add(item.Name);
             }
 
-            //TODO this is a waste to update all the time maybe try to update once
+            //update recipes enable the recipes that are possible to craft
             foreach (var item in app.Recipes.Recipes )
             {
-                //make and setup comboboxitem
+                //make and setup a new comboboxitem
                 ComboBoxItem comboBoxItem = new ComboBoxItem();
                 comboBoxItem.Content = item.Name;
                 //Disable combobox item will enable if we can craft from the inventory
@@ -64,11 +76,8 @@ namespace WpfAppCrafting
                 //Add to combobox
                 cRecipe.Items.Add(comboBoxItem);
             }
-
-
         }
 
-        //TODO clean up warnings
         private void btnAddToCraftingInventory_Click(object sender, RoutedEventArgs e)
         {
             string selectedItem = string.Empty;
@@ -78,11 +87,11 @@ namespace WpfAppCrafting
                 return;
             }
             //Use value none if no value
-            selectedItem = cInventory.SelectedValue.ToString() ?? "none";
+            selectedItem = cInventory.SelectedItem.ToString() ?? "none";
             
+            IItem item = app.Supplier.GetItem(selectedItem);
+            app.Customer.MoveItemToCraftingItemsFromInveroty(item.Name);
             
-            IItem item = app.Supplier.GetIngredient(selectedItem);
-            app.Customer.AddToCraftingItem(item.Name);
             UpdateUI();
         }
 
@@ -94,9 +103,9 @@ namespace WpfAppCrafting
                 return;
             }
 
-            app.Customer.RemoveFromCraftingItems(cCraftingInventory.SelectedValue.ToString() ?? "none");
-                UpdateUI();
-                  
+            app.Customer.MoveItemToInventoryFromCraftingItems(cCraftingInventory.SelectedValue.ToString() ?? "none");
+            
+            UpdateUI();      
         }
 
         private void btnCraft_Click(object sender, RoutedEventArgs e)
@@ -109,7 +118,6 @@ namespace WpfAppCrafting
             ListBoxItem selectedItem = (ListBoxItem)cRecipe.SelectedValue;
             IRecipe recipe = app.Supplier.GetRecipe(selectedItem.Content.ToString() ?? "none");
             app.Customer.Craft(recipe);
-            
             
             UpdateUI();
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -10,39 +11,46 @@ namespace ConsoleAppCrafting.Models
 {
     public class Customer
     {
-        List<IItem> inventoryItems;
+        List<IItem> inventoryItems;     //Private instance data mamber
 
-        public List<IItem> InventoryItems { get=>inventoryItems; set => inventoryItems = value; }
+        public List<IItem> InventoryItems { get => inventoryItems; set => inventoryItems = value; }
 
-        List<IItem> craftItems;
-        
-        public List<IItem> CraftItems { get=> craftItems; set => craftItems = value; }
+        List<IItem> craftItems;         //Private instance data mamber
+
+        public List<IItem> CraftItems { get => craftItems; set => craftItems = value; }
 
         decimal Money;
-        public Customer() 
-        { 
+        public Customer()
+        {
             this.inventoryItems = new List<IItem>();
             this.craftItems = new List<IItem>();
             this.Money = 2;
         }
 
-        public void GiveItem(IItem item)
+        /// <summary>
+        /// Add an Item to inventory
+        /// </summary>
+        /// <param name="item"></param>
+        public void AddItemToInventory(IItem item)
         {
             this.inventoryItems.Add(item);
         }
 
-        public void AddToCraftingItem(string ItemsName)
+        /// <summary>
+        /// Move Item from Inventory to CraftingItems
+        /// </summary>
+        /// <param name="ItemsName"></param>
+        public void MoveItemToCraftingItemsFromInveroty(string ItemsName)
         {
             var item = this.inventoryItems.Where(i => i.Name.Contains(ItemsName)).FirstOrDefault<IItem>();
-            if(item != null )
+            if (item != null)
             {
                 this.craftItems.Add(item);
                 this.inventoryItems.Remove(item);
             }
-            
         }
 
-        public void RemoveFromCraftingItems(string ItemsName) 
+        public void MoveItemToInventoryFromCraftingItems(string ItemsName)
         {
             var item = this.CraftItems.Where(i => i.Name.Contains(ItemsName)).FirstOrDefault<IItem>();
             if (item != null)
@@ -52,13 +60,8 @@ namespace ConsoleAppCrafting.Models
             }
         }
 
-        public string Craft(IRecipe recipe)
-        {
-            return this.craft(recipe, this.craftItems);
-        }
-
         /// <summary>
-        /// Determines if the current invetory can craft a recipe
+        /// Determines if the current inventory and craftInventory can craft a recipe
         /// </summary>
         /// <param name="recipe"></param>
         /// <returns>Returns true if the current Inventory Items Can Craft the Recipe</returns>
@@ -66,13 +69,28 @@ namespace ConsoleAppCrafting.Models
         {
             try
             {
-                recipe.MakeRecipe(this.InventoryItems);
+                //allItems is inventoryItems and craftItems
+                List<IItem> allItems = new List<IItem>();
+                foreach (var item in inventoryItems)
+                {
+                    allItems.Add(item);
+                }
+                foreach (var item in craftItems)
+                {
+                    allItems.Add(item);
+                }
+                recipe.MakeRecipe(allItems);
             }
             catch
             {
                 return false;
             }
             return true;
+        }
+
+        public string Craft(IRecipe recipe)
+        {
+            return this.craft(recipe, this.craftItems);
         }
 
         protected string craft(IRecipe recipe, List<IItem> sourceItems)
@@ -82,7 +100,7 @@ namespace ConsoleAppCrafting.Models
             {
                 item = this.makeRecipe(recipe, sourceItems);
                 //remove items from craftItems
-                while(sourceItems.Count > 0)
+                while (sourceItems.Count > 0)
                 {
                     this.craftItems.Remove(sourceItems[0]);
                 }
@@ -102,7 +120,17 @@ namespace ConsoleAppCrafting.Models
 
         public string About()
         {
-            return AboutIventory() + "\n" + AboutCraftItems();
+            return $"{AboutIventory()}\n{AboutCraftItems()}\ninventory value:{AboutValue():c}\nmoney:{Money:c}";
+        }
+
+        public decimal AboutValue()
+        {
+            decimal totalMoney = 0;
+            foreach (var item in this.inventoryItems)
+            {
+                totalMoney += item.Price;
+            }
+            return totalMoney;
         }
 
         public string AboutIventory()

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using System.Reflection.Metadata.Ecma335;
 using System.Text;
@@ -10,12 +11,12 @@ namespace ConsoleAppCrafting.Models
 {
     public class Customer
     {
-        List<IItem> inventoryItems;
+        List<IItem> inventoryItems;     //Private instance data mamber
 
         public List<IItem> InventoryItems { get=>inventoryItems; set => inventoryItems = value; }
 
-        List<IItem> craftItems;
-        
+        List<IItem> craftItems;         //Private instance data mamber
+
         public List<IItem> CraftItems { get=> craftItems; set => craftItems = value; }
 
         decimal Money;
@@ -26,12 +27,20 @@ namespace ConsoleAppCrafting.Models
             this.Money = 2;
         }
 
-        public void GiveItem(IItem item)
+        /// <summary>
+        /// Add an Item to inventory
+        /// </summary>
+        /// <param name="item"></param>
+        public void AddItemToInventory(IItem item)
         {
             this.inventoryItems.Add(item);
         }
 
-        public void AddToCraftingItem(string ItemsName)
+        /// <summary>
+        /// Move Item from Inventory to CraftingItems
+        /// </summary>
+        /// <param name="ItemsName"></param>
+        public void MoveItemToCraftingItemsFromInveroty(string ItemsName)
         {
             var item = this.inventoryItems.Where(i => i.Name.Contains(ItemsName)).FirstOrDefault<IItem>();
             if(item != null )
@@ -39,10 +48,9 @@ namespace ConsoleAppCrafting.Models
                 this.craftItems.Add(item);
                 this.inventoryItems.Remove(item);
             }
-            
         }
 
-        public void RemoveFromCraftingItems(string ItemsName) 
+        public void MoveItemToInventoryFromCraftingItems(string ItemsName) 
         {
             var item = this.CraftItems.Where(i => i.Name.Contains(ItemsName)).FirstOrDefault<IItem>();
             if (item != null)
@@ -111,7 +119,17 @@ namespace ConsoleAppCrafting.Models
 
         public string About()
         {
-            return AboutIventory() + "\n" + AboutCraftItems();
+            return $"{AboutIventory()}\n{AboutCraftItems()}\ninventory value:{AboutValue():c}\nmoney:{Money:c}";
+        }
+
+        public decimal AboutValue()
+        {
+            decimal totalMoney = 0;
+            foreach (var item in this.inventoryItems)
+            {
+                totalMoney += item.Price;
+            }
+            return totalMoney;
         }
 
         public string AboutIventory()
