@@ -45,6 +45,7 @@ namespace WpfAppCrafting
                 delegate
                 {
                     
+                    //run on every call back
                     lblTime.Content = (timeSpan).ToString("c");
                     if (timeSpan == TimeSpan.Zero)
                     {

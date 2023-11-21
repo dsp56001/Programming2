@@ -22,7 +22,7 @@ namespace WpfAppCrafting.Models.UI
             recipes = new FoodColoringRecipes();
             Supplier = new DyeSupplier();
             Customer = new Customer();
-            r = new Random();
+            r = new Random(); //only intialize once
         }
 
         internal void Test()
@@ -59,6 +59,8 @@ namespace WpfAppCrafting.Models.UI
 
         public void GiveRandom()
         {
+
+            
             int itemIndex = r.Next(this.Supplier.GetItemList().Count);
             Customer.AddItemToInventory(Supplier.GetItemList()[itemIndex]);
         }
