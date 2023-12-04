@@ -8,6 +8,6 @@ namespace ConsoleCaveSim.Models
 {
     public  interface IEntity : IAboutable
     {
-        uint Id { get; }
+        int Id { get; }
     }
 }
