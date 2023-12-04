@@ -2,6 +2,7 @@
 using ConsoleCaveSim.Models.Producers;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Data;
 using System.Linq;
 using System.Text;
@@ -16,8 +17,6 @@ namespace ConsoleCaveSim.Models
             this.Name = "Cave #" + this.Id;
             this.Description = "I like Caves!!!"; //just having fun TODO fix this
         }
-
-        
         public override void Tick()
         {
             base.Tick();
@@ -25,41 +24,22 @@ namespace ConsoleCaveSim.Models
             itemsToAdd.Clear();
             itemsToRemove.Clear();
 
-            for (int i = 0; i < this.Items.Count; i++)
+            foreach(var item in Items)
             {
-
-                if (this.Items[i] is Producer)
+                item.Tick();
+                if (item is Producer)
                 {
                     //Producers gonna produce
-                    if (this.Items[i] is Corn)
+                    if (item is Corn)
                     {
+                        Corn c = (Corn)item;
                         //if we have corn produce more corn
-                        itemsToAdd.Add(((Corn)this.Items[i]).Produce());
+                        itemsToAdd.Add(c.Produce());
+                        
+                        
                     }
                 }
 
-                if (this.Items[i] is Consumer)
-                {
-                    //Consumers gonna consume
-                    if (this.Items[i] is Bat)
-                    {
-
-                        Bat b = (Bat)this.Items[i];
-                        //bats eat corn
-                        Corn c = (Corn)this.Items.Where(c => c.Name == "Corn").FirstOrDefault();
-                        if (c != null)
-                        {
-                            //Eat the corn
-                            b.Consume(c);
-                            itemsToRemove.Add(c);
-                        }
-                        else
-                        {
-                            b.Hunger++;
-                        }
-
-                    }
-                }
             }
 
             //Add new items

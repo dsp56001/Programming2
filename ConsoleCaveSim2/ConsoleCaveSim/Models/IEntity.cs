@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace ConsoleCaveSim.Models
 {
-    public  interface IEntity : IAboutable
+    public  interface IEntity : IAboutable, ITickable
     {
         int Id { get; }
+
+
     }
 }

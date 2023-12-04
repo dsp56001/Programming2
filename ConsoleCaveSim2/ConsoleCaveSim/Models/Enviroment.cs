@@ -12,7 +12,7 @@ namespace ConsoleCaveSim.Models
     public abstract class Enviroment : Entity , ITickable
     {
         #region Properties
-        public int LifeTimeTicks { get; protected set; }
+        
         #endregion
 
         #region Methods
@@ -53,11 +53,7 @@ namespace ConsoleCaveSim.Models
             this.Items.Add(entity);
         }
 
-        public virtual void Tick()
-        {
-            this.LifeTimeTicks += 1;
-
-        }
+        
 
         #endregion
 

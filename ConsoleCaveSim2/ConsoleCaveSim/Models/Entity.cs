@@ -14,6 +14,8 @@ namespace ConsoleCaveSim.Models
         public string Description { get; set; }
         public int Id { get; set; }
 
+        public int LifeTimeTicks { get; protected set; }
+
         #endregion
         //Static means it belongs to class and not an instance of the class
         //protected means abvailable to itself or child classes
@@ -37,7 +39,28 @@ namespace ConsoleCaveSim.Models
             return $"{this.Name} {this.Description}";
         }
 
+        public virtual void Tick()
+        {
+            this.LifeTimeTicks += 1;
+
+        }
+
         #endregion
+
+        public override bool Equals(object? obj)
+        {
+            if(obj is Entity)
+            {
+                return this.Id == ((Entity)obj).Id;
+            }
+            return base.Equals(obj);
+
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
 
     }
 }
