@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="WpfAppCaveSim.Views.BatControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:WpfAppCaveSim.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal">
+            <Label>ID:</Label>
+                <Label x:Name="lblBatID" Content="{Binding Path=Id}"></Label>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>Hunger:</Label>
+                <Label x:Name="lblBatHunger" Content="{Binding Path=HungerLevel}"></Label>
+            </StackPanel>
+            <Slider x:Name="sliderCurrentHunger" Value="{Binding Path=CurrentHunger}"></Slider>
+            <Label x:Name="lblState" Content="{Binding Path=State}"></Label>
+        </StackPanel>
+    </Grid>
+</UserControl>

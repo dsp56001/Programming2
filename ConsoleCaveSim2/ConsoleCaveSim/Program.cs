@@ -14,12 +14,7 @@ namespace ConsoleCaveSim
 
             Cave sim = new Cave();
 
-            sim.Add(new Bat(sim));
-            sim.Add(new Bat(sim));
-            sim.Add(new Bat(sim));
-            sim.Add(new Corn());
-            sim.Add(new Corn());
-            sim.Add(new Corn());
+           
 
 
 

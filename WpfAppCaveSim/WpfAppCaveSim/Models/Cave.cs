@@ -13,11 +13,20 @@ namespace ConsoleCaveSim.Models
 {
     public class Cave : Enviroment
     {
-        public Cave() 
+        public int CornCount { get; set; }
+        
+        public Cave() : this(5,80)
+        {
+            
+        }
+
+        public Cave(int bats, int corn)
         {
             this.Name = "Cave #" + this.Id;
             this.Description = "I like Caves!!!"; //just having fun TODO fix this
-            this.SetupCave(5, 80);
+
+            CornCount = corn;
+            this.SetupCave(bats, CornCount);
         }
 
         private void SetupCave(int batCount, int cornCount)
@@ -35,7 +44,7 @@ namespace ConsoleCaveSim.Models
 
         public override string About()
         {
-            string EnvAbout = string.Empty; //base.About();
+            string EnvAbout = string.Empty; // base.About();
             EnvAbout += "\nItems -------------";
             foreach (var entity in this.Items)
             {
@@ -45,16 +54,16 @@ namespace ConsoleCaveSim.Models
                     EnvAbout += "\n" + entity.About();
                 }
             }
-            int corncount = this.Items.Where(i => i is Corn).Count();
-            EnvAbout += "\nCorn Count " + corncount.ToString();
+            
+            EnvAbout += "\nCorn Count " + CornCount.ToString();
             return EnvAbout;
         }
 
         public override void Tick()
         {
             base.Tick();
-
-            foreach(var item in Items)
+            
+            foreach (var item in Items)
             {
                 item.Tick();
                 if (item is Producer)
@@ -84,6 +93,9 @@ namespace ConsoleCaveSim.Models
                 this.Items.Remove(item);
             }
             itemsToRemove.Clear();
+
+            //Update Corn Count
+            CornCount = this.Items.Where(i => i is Corn).Count();
         }
     }
 }

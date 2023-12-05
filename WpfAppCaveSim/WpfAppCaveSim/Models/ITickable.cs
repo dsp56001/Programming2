@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace ConsoleCaveSim.Models
 {
-    public  interface IEntity : IAboutable, ITickable
+    public interface ITickable
     {
-        int Id { get; }
+        public int LifeTimeTicks { get; }
+        public void Tick();
     }
 }

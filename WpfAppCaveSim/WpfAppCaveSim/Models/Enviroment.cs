@@ -41,10 +41,7 @@ namespace ConsoleCaveSim.Models
             EnvAbout += "\nItems -------------";
             foreach (var entity in this.Items)
             {
-                
-                
                 EnvAbout += "\n" + entity.About();
-                
             }
             
             return EnvAbout;

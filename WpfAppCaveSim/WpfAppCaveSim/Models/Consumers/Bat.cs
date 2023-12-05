@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace ConsoleCaveSim.Models.Consumers
 {
     
-    public enum BatState { Happy, Hungry, NotLiving }
+    public enum BatState { Happy, Hungry, NotLiving, Full }
     
     public class Bat : Consumer
     {
@@ -35,7 +35,8 @@ namespace ConsoleCaveSim.Models.Consumers
         {
             if(entity is Corn)
             {
-                this.HungerLevel--;
+                if(this.HungerLevel > 0)
+                    this.HungerLevel--;
 
                 Corn c = ((Corn)entity);
                 c.State = CornState.Consumed;
@@ -51,6 +52,7 @@ namespace ConsoleCaveSim.Models.Consumers
         public override void Tick()
         {
             base.Tick();
+            UpdateState();
             this.CurrentHunger = Math.Min(rand.Next(10), HungerLevel);
             var corns = this.enviroment.Items.OfType<Corn>().ToList();
             //Eat the corn
@@ -71,5 +73,23 @@ namespace ConsoleCaveSim.Models.Consumers
             }while(hungerCount > 0);
         }
 
+        private void UpdateState()
+        {
+
+            if (HungerLevel > 100)
+            {
+                this.State = BatState.Hungry;
+            }
+            if (HungerLevel > 20)
+            {
+                this.State = BatState.Happy;
+            }
+            if (HungerLevel == 0)
+            {
+                this.State = BatState.Full;
+            }
+            
+            
+        }
     }
 }

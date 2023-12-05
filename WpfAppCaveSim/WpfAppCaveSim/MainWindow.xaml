@@ -1,0 +1,39 @@
+﻿<Window x:Class="WpfAppCaveSim.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppCaveSim"
+        mc:Ignorable="d"
+        xmlns:views="clr-namespace:WpfAppCaveSim.Views"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label>Cave</Label>
+                    <Label>Bats</Label>
+                    <TextBox x:Name="tbBats">4</TextBox>
+                    <Label>Corn</Label><TextBox x:Name="tbCorn">80</TextBox>
+                    <Button x:Name="btnNewCave" Click="btnNewCave_Click">Creat New Cave</Button>
+                </StackPanel>
+                <Button x:Name="btnTick" Click="btnTick_Click">Tick</Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <ListBox x:Name="lbBats" ItemsSource="{Binding}" 
+                            Grid.IsSharedSizeScope="True"
+                            HorizontalContentAlignment="Stretch">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <views:BatControl x:Name="BatControl"></views:BatControl>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <StackPanel>
+                    <Label>Corn Count</Label>
+                    <Label x:Name="lbCornCount"></Label>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

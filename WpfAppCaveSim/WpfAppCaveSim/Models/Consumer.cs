@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace ConsoleCaveSim.Models
 {
-    public  interface IEntity : IAboutable, ITickable
+    public class Consumer : Entity
     {
-        int Id { get; }
+        public Consumer() 
+        { }
+
+        public virtual void Consume(IEntity entity)
+        {
+
+        }
     }
 }

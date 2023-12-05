@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34009.444
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAppCaveSim", "WpfAppCaveSim\WpfAppCaveSim.csproj", "{52A22640-1D71-4CEC-B94A-977D92C18BE5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{52A22640-1D71-4CEC-B94A-977D92C18BE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A22640-1D71-4CEC-B94A-977D92C18BE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A22640-1D71-4CEC-B94A-977D92C18BE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A22640-1D71-4CEC-B94A-977D92C18BE5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7C28C249-BAB7-4CA9-A0D6-4941168061CC}
+	EndGlobalSection
+EndGlobal
