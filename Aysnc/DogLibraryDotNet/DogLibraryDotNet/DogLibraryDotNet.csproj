@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\DogLibrary\Cat.cs" Link="Cat.cs" />
+    <Compile Include="..\..\DogLibrary\Dog.cs" Link="Dog.cs" />
+    <Compile Include="..\..\DogLibrary\IMammal.cs" Link="IMammal.cs" />
+    <Compile Include="..\..\DogLibrary\Mammal.cs" Link="Mammal.cs" />
+  </ItemGroup>
+
+</Project>

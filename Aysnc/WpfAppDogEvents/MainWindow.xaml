@@ -1,0 +1,41 @@
+﻿<Window x:Class="WpfAppDogEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfAppDogEvents"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel>
+        <TabControl Height="200">
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal" >
+                        <TextBlock>Tab 1</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <StackPanel>
+                    <Button x:Name="btnDogBarkSync" Width="100" Click="btnDogBarkSync_Click" >Dog Bark Sync</Button>
+                        <Button x:Name="btnDogBarkASync" Width="100" Click="btnDogBarkASync_Click" >Dog Bark ASync</Button>
+                        <Button x:Name="btnDogBarkASyncTask" Width="100" Click="btnDogBarkASyncTask_Click" >Dog Bark ASync Task</Button>
+                    </StackPanel>
+            </TabItem>
+            <TabItem>
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock>Tab 2</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+
+                <StackPanel>
+                        <Button x:Name="btnDogBarkASyncTab" Width="100" Click="btnDogBarkASyncTask_Click" >Dog Bark ASync Task</Button>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+            
+            <ProgressBar x:Name="progBar" Height="20 " Value="100" />
+            <TextBlock x:Name="tbOut">Text</TextBlock>
+        </StackPanel>
+    </Grid>
+</Window>
